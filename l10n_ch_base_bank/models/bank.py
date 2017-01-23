@@ -5,7 +5,7 @@ import re
 from openerp import models, fields, api, _
 from openerp.tools import mod10r
 from openerp import exceptions
-
+from openerp.addons.base_iban import base_iban
 
 class BankCommon(object):
 
@@ -52,6 +52,7 @@ class BankCommon(object):
         """
         if not iban[:2] == 'CH':
             return False
+        iban = base_iban.normalize_iban(iban)
         part1 = iban[-9:-7]
         part2 = iban[-7:-1].lstrip('0')
         part3 = iban[-1:].lstrip('0')
