@@ -69,7 +69,7 @@
               </CdtrRefInf>
             </Strd>
           </RmtInf>
-   % else:
+   % elif invoice.supplier_invoice_number and len(invoice.supplier_invoice_number) > 0:
           <RmtInf>
             <Ustrd>${invoice.supplier_invoice_number}</Ustrd>
           </RmtInf>
