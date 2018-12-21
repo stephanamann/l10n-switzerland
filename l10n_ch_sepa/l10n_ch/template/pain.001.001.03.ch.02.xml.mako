@@ -65,7 +65,7 @@
           <RmtInf>
             <Strd>
               <CdtrRefInf>
-                <Ref>${invoice.reference}</Ref>
+                <Ref>${invoice.reference.replace(' ', '')}</Ref>
               </CdtrRefInf>
             </Strd>
           </RmtInf>
